@@ -1,6 +1,6 @@
 # Lost in Kyoto: A Fishing Tale
 
-[![CI](https://github.com/mtutajewski/lost-in-kyoto-a-fishing-tale/actions/workflows/ci.yml/badge.svg)](https://github.com/mtutajewski/Lost-in-Kyoto/actions/workflows/ci.yml)
+[![CI](https://github.com/mtutajewski/lost-in-kyoto-a-fishing-tale/actions/workflows/ci.yml/badge.svg)](https://github.com/mtutajewski/lost-in-kyoto-a-fishing-tale/actions/workflows/ci.yml)
 
 **JavaScript (Canvas 2D, Web Audio API) · HTML/CSS · Python (pytest, Playwright) · GitHub Actions**
 
