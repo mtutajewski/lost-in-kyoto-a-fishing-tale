@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>Lost in Kyoto</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="wrap">
+  <canvas id="game" width="320" height="180"></canvas>
+  <div id="hud" style="display:none">
+    <div id="stat" class="hudbox"><span><span class="coin"></span><span id="coins">0</span></span><span class="tod" id="tod">ひる Day</span></div>
+    <div id="bait" class="hudbox" title="Change bait (E)">えさ <span id="baitName">Onigiri</span></div>
+    <div id="btns">
+      <button class="hbtn" data-p="basket" title="Basket (B)">かご<small>BASKET</small><span class="dot" id="bdot"></span></button>
+      <button class="hbtn" data-p="market" title="Market (M)">いちば<small>MARKET</small></button>
+      <button class="hbtn" data-p="trade" title="Trade (T)">こうかん<small>TRADE</small></button>
+      <button class="hbtn" data-p="zukan" title="Fish Book (Z)">ずかん<small>ZUKAN</small><span class="dot" id="zdot"></span></button>
+      <button class="hbtn" id="snd" title="Sound">おと<small>SOUND</small></button>
+    </div>
+    <div id="hint" class="hudbox"></div>
+    <div id="toasts"></div>
+  </div>
+</div>
+
+<div id="title" class="overlay show">
+  <div class="logo">
+    <div class="jpbig">京都で迷子</div>
+    <div class="en">LOST IN KYOTO</div>
+    <div class="tale">～ A Fishing Tale ・ 釣りの物語 ～</div>
+  </div>
+  <div class="tbtns" id="tbtns"></div>
+  <div class="credit">Hold SPACE or press &amp; hold to cast · Works with mouse, keys &amp; touch</div>
+</div>
+
+<div id="rot">↻ Rotate your phone for the best view</div>
+<div id="storyO" class="overlay"><div class="story" id="storyBox"></div></div>
+
+<div id="panel" class="overlay"><div class="panel">
+  <div class="phead"><span class="k" id="pk">かご</span><h2 id="pt">Basket</h2><button class="x" id="px">✕</button></div>
+  <div class="pbody" id="pb"></div>
+  <div class="foot" id="pf"></div>
+</div></div>
+
+<div id="inspect" class="overlay"><div class="card" id="card">
+  <div class="ribbon" id="ribbon"></div>
+  <div class="stage"><canvas id="insCv" width="200" height="100"></canvas><div class="hanko" id="hanko">新<small>NEW!</small></div></div>
+  <h3 id="iname"></h3>
+  <div class="sub" id="isub"></div>
+  <div class="stats" id="istats"></div>
+  <div class="desc" id="idesc"></div>
+  <div class="best" id="ibest"></div>
+  <div class="cbtns" id="ibtns"></div>
+</div></div>
+
+
+<script src="js/core.js"></script>
+<script src="js/data.js"></script>
+<script src="js/sprites.js"></script>
+<script src="js/world.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/game.js"></script>
+<script src="js/render.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
