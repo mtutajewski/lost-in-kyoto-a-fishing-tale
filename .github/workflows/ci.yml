@@ -32,3 +32,17 @@ jobs:
         with:
           name: lost-in-kyoto
           path: dist/lost-in-kyoto.html
+
+  notify-site:
+    # After a green build on main, ask the site repo to redeploy the game.
+    needs: test
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger marcintutajewski.com deploy
+        env:
+          GH_TOKEN: ${{ secrets.SITE_DISPATCH_TOKEN }}
+        run: |
+          gh api repos/mtutajewski/marcintutajewski.com/dispatches \
+            -f event_type=lost-in-kyoto-updated \
+            -F "client_payload[sha]=${{ github.sha }}"
