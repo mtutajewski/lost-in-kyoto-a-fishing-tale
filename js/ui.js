@@ -75,7 +75,7 @@ function openInspect(inst,fresh){
    insAnim=requestAnimationFrame(loop);};
  insAnim=requestAnimationFrame(loop);
  updHUD();save();
- if(fresh&&FISH.every(ff=>S.zukan[ff.id])&&!S.done)setTimeout(()=>{G.pendingEnd=true;},50);
+ if(fresh&&FISH.every(ff=>S.zukan[ff.id])&&!S.done)G.pendingEnd=true;
 }
 function closeInspect(){$('inspect').classList.remove('show');cancelAnimationFrame(insAnim);if(G.state==='inspect')G.state='idle';G.leap=null;updHUD();save();
  if(G.pendingEnd){G.pendingEnd=false;setTimeout(ending,400);}}
